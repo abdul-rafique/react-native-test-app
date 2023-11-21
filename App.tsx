@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import OpenURLButton from './Link';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -76,6 +77,13 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <View>
+            <Text>App is now available on Firebase App Disctibution</Text>
+            <OpenURLButton
+              title="Want to contribute?"
+              url="https://appdistribution.firebase.dev/i/97110d1cb0a8c26f"
+            />
+          </View>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
